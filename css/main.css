@@ -162,11 +162,11 @@ button {
 
 .popup__title {
   color: #2e2a2f;
-  font-family: "Montserrat", sans-serif;
   letter-spacing: 0.225rem;
-  margin-bottom: 0.85rem;
   font-size: 1.85rem;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  margin-bottom: 0.85rem;
 }
 
 .popup__title--icon {
