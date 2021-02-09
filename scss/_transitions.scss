@@ -1,0 +1,150 @@
+//======================//
+//===// Animations //===//
+//======================//
+
+@keyframes logo-text-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes logo-icon-anim-left {
+  0% {
+    opacity: 0;
+    margin-right: -2em;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    margin-right: 0.15em;
+  }
+}
+
+@keyframes logo-icon-anim-right {
+  0% {
+    opacity: 0;
+    margin-left: -2em;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0.15em;
+  }
+}
+
+@keyframes heart-beat-logo {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(0, 0) scale(1.3);
+  }
+}
+
+@keyframes heart-beat-card {
+  0%,
+  100% {
+    transform: translate(-50%, -60%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -60%) scale(1.3);
+  }
+}
+
+//======================================================//
+//===// Page transition (Top Right to Bottom Left) //===//
+//======================================================//
+
+.slide-tr-bl {
+  position: fixed;
+  top: 100%;
+  left: -100%;
+  bottom: 0;
+  z-index: 101;
+  width: 100%;
+  background: linear-gradient(bottom left, color(bg), color(accent));
+  clip-path: polygon(0 48%, 52% 48%, 52% 100%, 0 100%);
+  transition: time(transition-time) ease-out;
+
+  &.transition--active-tr-bl {
+    top: 0;
+    left: 0;
+  }
+}
+
+//======================================================//
+//===// Page transition (Top Left to Bottom Right) //===//
+//======================================================//
+
+.slide-tl-br {
+  position: fixed;
+  top: 100%;
+  right: -100%;
+  bottom: 0;
+  z-index: 101;
+  width: 100%;
+  background: linear-gradient(bottom right, color(bg), color(accent));
+  clip-path: polygon(48% 48%, 100% 48%, 100% 100%, 48% 100%);
+  transition: time(transition-time) ease-out;
+
+  &.transition--active-tl-br {
+    top: 0;
+    right: 0;
+  }
+}
+
+//======================================================//
+//===// Page transition (Bottom Right to Top Left) //===//
+//======================================================//
+
+.slide-br-tl {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 100%;
+  z-index: 101;
+  width: 100%;
+  background: linear-gradient(top left, color(bg), color(accent));
+  clip-path: polygon(0 0, 52% 0, 52% 52%, 0 52%);
+  transition: time(transition-time) ease-out;
+
+  &.transition--active-br-tl {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+//======================================================//
+//===// Page transition (Bottom Left to Top Right) //===//
+//======================================================//
+
+.slide-bl-tr {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 100%;
+  z-index: 101;
+  width: 100%;
+  background: linear-gradient(top right, color(bg), color(accent));
+  clip-path: polygon(48% 0, 100% 0, 100% 52%, 48% 52%);
+  transition: time(transition-time) ease-out;
+
+  &.transition--active-bl-tr {
+    bottom: 0;
+    right: 0;
+  }
+}

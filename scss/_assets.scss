@@ -1,0 +1,152 @@
+//===================//
+//===// Buttons //===//
+//===================//
+
+.btn {
+  position: relative;
+  background: color(btn);
+  border: none;
+  outline: none;
+  color: color(txt);
+  font-family: font(txt);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: opacity time(btn-anim-time) ease;
+
+  &--small {
+    font-size: 1rem;
+  }
+
+  &--big {
+    font-size: 1.175rem;
+  }
+
+  &--icon {
+    pointer-events: none;
+    font-family: 'Font Awesome 5 Free';
+    box-shadow: none;
+  }
+
+  &--about {
+    font-weight: 400;
+    border-radius: 50px;
+    margin-top: 0.5rem;
+    padding: 0.5em 0.8em;
+
+    @include mouse-hover;
+
+    &:hover .btn--info {
+      transform: scale(1.15, 1.15);
+    }
+
+    &:hover .btn--close {
+      transform: scale(1.15, 1.15) rotate(180deg);
+    }
+  }
+
+  &--info,
+  &--close {
+    transition: transform time(btn-anim-time) ease;
+    margin-right: 0.1em;
+  }
+}
+
+//=================//
+//===// Popup //===//
+//=================//
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity time(popup-time), visibility time(popup-time);
+
+  &.popup--active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    background: color(bg);
+    border-radius: 6.5px;
+    padding: 3.5rem 2.2rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    color: color(txt);
+    font-family: font(txt);
+    letter-spacing: 0.225rem;
+    margin-bottom: 0.85rem;
+
+    font-size: 1.85rem;
+    font-weight: 700;
+
+    &--icon {
+      color: color(accent);
+      font-size: 1.85rem;
+      animation: heart-beat-logo time(heart-beat) ease infinite;
+    }
+  }
+
+  &__subtitle {
+    color: color(txt);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.2rem 0 0.8rem 0;
+  }
+
+  &__text {
+    color: color(txt);
+    font-size: 1.15rem;
+    font-weight: 400;
+
+    & + & {
+      margin-top: 0.4em;
+    }
+
+    &:last-of-type {
+      margin-bottom: 1.55rem;
+    }
+  }
+
+  &__link {
+    color: color(txt);
+    font-size: 1rem;
+    margin-left: 0.25em;
+    transition: opacity time(btn-anim-time) ease;
+
+    @include mouse-hover;
+  }
+
+  &__circle {
+    position: relative;
+    top: 65%;
+    color: color(txt);
+    font-size: 0.25rem;
+    transform: translateY(-65%);
+  }
+}

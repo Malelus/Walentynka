@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./img/icon.png" />
+    <title>Walentynka</title>
+  </head>
+  <body>
+    <div class="transition-tr-bl transition--active-tr-bl slide-tr-bl"></div>
+    <div class="transition-tl-br transition--active-tl-br slide-tl-br"></div>
+    <div class="transition-br-tl transition--active-br-tl slide-br-tl"></div>
+    <div class="transition-bl-tr transition--active-bl-tr slide-bl-tr"></div>
+
+    <header>
+      <div class="logo">
+        <i class="fas fa-heart logo__icon"></i>
+        <span class="logo__text">Walentynki</span>
+        <i class="fas fa-heart logo__icon"></i>
+      </div>
+    </header>
+
+    <main>
+      <div class="card-grid">
+        <div class="card card--first">
+          <span class="card__kind-text card__location-outer card__write-hor">Wspaniała</span>
+        </div>
+        <div class="card card--second">
+          <span class="card__kind-text card__location-outer card__write-ver">Jedyna</span>
+        </div>
+        <div class="card card--third">
+          <span class="card__kind-text card__location-outer card__write-hor">Uśmiechnięta</span>
+        </div>
+        <div class="card card--fourth">
+          <span class="card__kind-text card__location-outer card__write-ver">Kochana</span>
+        </div>
+        <div class="card card--fifth">
+          <span class="card__kind-text card__location-inner card__write-hor">Wyrozumiała</span>
+        </div>
+        <div class="card card--sixth">
+          <span class="card__kind-text card__location-inner card__write-ver">Moja</span>
+        </div>
+        <div class="card card--seventh">
+          <span class="card__kind-text card__location-inner card__write-hor">Urocza</span>
+        </div>
+        <div class="card card--eighth">
+          <span class="card__kind-text card__location-inner card__write-ver">Dobra</span>
+        </div>
+        <div class="card card--ninth">
+          <span class="card__kind-text card__location-center card__write-hor">Oliwka</span>
+          <i class="fas fa-heart card__write-hor card__kind-icon"></i>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button class="btn btn--small btn--about show-popup" data-target="#about_page">
+        <i class="fas fa-info-circle btn btn--info btn--icon"></i> O stronie
+      </button>
+    </footer>
+
+    <div class="popup" id="about_page">
+      <div class="popup__overlay show-popup" data-target="#about_page"></div>
+      <div class="popup__inner">
+        <p class="popup__title">
+          <i class="fas fa-heart popup__title--icon"></i>
+          <span class="popup__title">Walentynki</span>
+          <i class="fas fa-heart popup__title--icon"></i>
+        </p>
+        <p class="popup__text">
+          <i class="fas fa-info"></i> - Kartka zrobiona na zbliżające się święto zakochanych.
+        </p>
+        <p class="popup__text">
+          <i class="fab fa-github"></i> - Strona została umieszczona również na repozytorium
+          GitHub'a.<a
+            href="https://github.com/Malelus/Walentynka"
+            class="popup__link"
+            target="_blank"
+            title="github.com/Malelus/Walentynka"
+            ><i class="fas fa-external-link-alt"></i
+          ></a>
+        </p>
+        <p class="popup__subtitle">Autor: Mateusz Narowski</p>
+        <p class="popup__text"><i class="fas fa-circle popup__circle"></i> Klasa: 3Bi</p>
+        <p class="popup__text"><i class="fas fa-circle popup__circle"></i> Grupa: I</p>
+        <p class="popup__text"><i class="far fa-calendar-alt"></i> - 09.02.2021r.</p>
+        <span>
+          <button class="btn btn--big btn--about show-popup" data-target="#about_page">
+            <i class="fas fa-times btn btn--close btn--icon"></i> Zamknij
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <script src="./addons/main.js"></script>
+  </body>
+</html>

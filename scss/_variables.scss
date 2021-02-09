@@ -1,0 +1,73 @@
+//===========================================//
+//===// Brakepoint (Responsive layouts) //===//
+//===========================================//
+
+$brake: (
+  'mobile': 700px,
+  'desktop': 1000px,
+);
+
+//=================//
+//===// Fonts //===//
+//=================//
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+$font: (
+  'txt': (
+    'Montserrat',
+    sans-serif,
+  ),
+);
+
+//==================//
+//===// Colors //===//
+//==================//
+
+$color: (
+  'txt': #2e2a2f,
+  'bg': #dc8688,
+  'first': #d97c7e,
+  'second': #d67274,
+  'third': #d3686b,
+  'fourth': #d05e61,
+  'fifth': #ce5457,
+  'sixth': #cb4b4d,
+  'seventh': #c84144,
+  'eighth': #c3393c,
+  'ninth': #b93639,
+  'accent': #b93639,
+  'btn': #d3686b,
+);
+
+//===================//
+//===// Timings //===//
+//===================//
+
+$time: (
+  /*0.4s*/ 'transition-static': 0.4s,
+  /*.75s*/ 'transition-time': 0.75s,
+  /*0.4s*/ 'popup-time': 0.4s,
+  /*0.4s*/ 'btn-anim-time': 0.4s,
+  /*0.6s*/ 'logo-anim-time': 0.6s,
+  /*0.6s*/ 'heart-show': 0.6s,
+  /*0.6s*/ 'heart-beat': 0.6s,
+  /*1.2s*/ 'anim-delay': 1.2s,
+  /*0.5s*/ 'all-anim-delay': 0.5s
+);
+
+//======================================//
+//===// Exporting variables for js //===//
+//======================================//
+
+:root {
+  --transition-static: #{time(transition-static)};
+  --transition-time: #{time(transition-time)};
+  --popup-time: #{time(popup-time)};
+  --btn-anim-time: #{time(btn-anim-time)};
+  --logo-anim-time: #{time(logo-anim-time)};
+  --heart-show: #{time(heart-show)};
+  --heart-beat: #{time(heart-beat)};
+  --anim-delay: #{time(anim-delay)};
+  --all-anim-delay: #{time(all-anim-delay)};
+}

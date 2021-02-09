@@ -1,0 +1,59 @@
+//===============================================//
+//===// Responsive layout - desktop section //===//
+//===============================================//
+
+@include desktop {
+  //==================//
+  //===// Header //===//
+  //==================//
+
+  //===// Header > Logo //===//
+
+  .logo {
+    &__text {
+      font-size: 2.35rem;
+    }
+
+    &__icon {
+      font-size: 2.35rem;
+    }
+  }
+
+  //================//
+  //===// Main //===//
+  //================//
+
+  //===// Main > Card-grid //===//
+
+  .card-grid {
+    display: grid;
+    gap: 0.5em;
+    grid-template: repeat(5, 150px) / repeat(5, 150px);
+
+    @include template;
+  }
+
+  //===// Main > Card //===//
+
+  .card {
+    &__kind {
+      &-icon {
+        font-size: 2.35rem;
+      }
+    }
+
+    &__location {
+      &-outer {
+        font-size: 2.31rem;
+      }
+
+      &-inner {
+        font-size: 1.934625rem;
+      }
+
+      &-center {
+        font-size: 1.55925rem;
+      }
+    }
+  }
+}

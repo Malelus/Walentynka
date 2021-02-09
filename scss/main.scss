@@ -1,0 +1,218 @@
+//=================================================================================//
+//===// Importing page default styling reset, variables, assets & transitions //===//
+//=================================================================================//
+
+@import './reset', './functions', './variables', './assets', './transitions';
+
+//====================================================//
+//===// Setting default page styling & scrollbar //===//
+//====================================================//
+
+body {
+  background: color(bg);
+  color: color(txt);
+  font-family: font(txt);
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: color(bg);
+    margin: 0.08rem 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: color(accent);
+    border: 3.25px solid color(bg);
+    border-radius: 100px;
+  }
+}
+
+//==================//
+//===// Header //===//
+//==================//
+
+header {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+//===// Header > Logo //===//
+
+.logo {
+  &__text {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    font-size: 1.65rem;
+    animation: logo-text-anim time(logo-anim-time) time(all-anim-delay) ease forwards;
+  }
+
+  &__icon {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    font-size: 1.65rem;
+    color: color(accent);
+    transform: translate(0, 0) scale(1, 1);
+
+    &:first-of-type {
+      margin-right: 0.15em;
+      animation: logo-icon-anim-left time(logo-anim-time) (time(heart-show) + time(all-anim-delay))
+          ease forwards,
+        heart-beat-logo time(heart-beat) (time(anim-delay) + time(all-anim-delay)) ease infinite;
+    }
+
+    &:last-of-type {
+      margin-left: 0.15em;
+      animation: logo-icon-anim-right time(logo-anim-time) (time(heart-show) + time(all-anim-delay))
+          ease forwards,
+        heart-beat-logo time(heart-beat) (time(anim-delay) + time(all-anim-delay)) ease infinite;
+    }
+  }
+}
+
+//================//
+//===// Main //===//
+//================//
+
+main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+//===// Main > Card-grid //===//
+
+.card-grid {
+  display: grid;
+  gap: 0.35em;
+  grid-template: repeat(5, 65px) / repeat(5, 65px);
+
+  @include template;
+}
+
+//===// Main > Card //===//
+
+.card {
+  position: relative;
+
+  &__kind {
+    &-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      text-transform: uppercase;
+      transform: translate(-50%, -50%);
+    }
+
+    &-icon {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      font-size: 0.925rem;
+      transform: translate(-50%, -60%) scale(1, 1);
+      animation: heart-beat-card time(heart-beat) time(all-anim-delay) ease infinite;
+    }
+  }
+
+  &__location {
+    &-outer {
+      font-size: 1rem;
+    }
+
+    &-inner {
+      font-size: 0.8375rem;
+    }
+
+    &-center {
+      font-size: 0.675rem;
+    }
+  }
+
+  &__write {
+    &-hor {
+      letter-spacing: 0.1em;
+      writing-mode: horizontal-tb;
+      text-orientation: sideways;
+    }
+
+    &-ver {
+      letter-spacing: 0.15em;
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+    }
+  }
+
+  &--first {
+    grid-area: first;
+    background: color(first);
+  }
+
+  &--second {
+    grid-area: second;
+    background: color(second);
+  }
+
+  &--third {
+    grid-area: third;
+    background: color(third);
+  }
+
+  &--fourth {
+    grid-area: fourth;
+    background: color(fourth);
+  }
+
+  &--fifth {
+    grid-area: fifth;
+    background: color(fifth);
+  }
+
+  &--sixth {
+    grid-area: sixth;
+    background: color(sixth);
+  }
+
+  &--seventh {
+    grid-area: seventh;
+    background: color(seventh);
+  }
+
+  &--eighth {
+    grid-area: eighth;
+    background: color(eighth);
+  }
+
+  &--ninth {
+    grid-area: ninth;
+    background: color(ninth);
+  }
+}
+
+//==================//
+//===// Footer //===//
+//==================//
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+//===// Footer > Content //===//
+
+.footer {
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+//==========================================================//
+//===// Importing responisve layout (mobile & desktop) //===//
+//==========================================================//
+
+@import './mobile', './desktop';
